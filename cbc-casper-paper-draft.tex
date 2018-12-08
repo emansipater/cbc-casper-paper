@@ -269,7 +269,7 @@ We can construct finite protocol states that satisfy these equations by using th
 
 The type signature of the estimator is $\mathcal{E} : \Sigma \to \mathcal{P}(\mathcal{C}) \setminus \emptyset$, causing possible concern due to our application of $\mathcal{E}$ to $Justification(m) \in \Sigma^n \neq \Sigma$. However we note that $\Sigma^n \subset \Sigma$, meaning that $\mathcal{E}$ is defined over $\Sigma^n$.
 
-Note that we explicitly restricted protocol messages to only have consensus values from the estimator, allowing validators to make a choice between values of the consensus when the the estimator returns a multi-element set (but not otherwise).
+Note that we explicitly restricted protocol messages to only have consensus values from the estimator, allowing validators to make a choice between values of the consensus when the estimator returns a multi-element set (but not otherwise).
 
 We also restricted the definition of protocol states so that we could have the following definition of protocol state transitions:
 
@@ -296,7 +296,7 @@ Equivocation faults are a Byzantine behaviour that is fundamentally enough to ca
   \end{align}
 \end{defn}
 
-Equivocating messages are distinct messages from the same validator that do not include each other in their justifications.
+Equivocating messages are distinct messages from the same validator where neither message includes the other in its justification.
 
 The equivocating validators in a protocol state are simply the validators who have equivocating messages in that state:
 
